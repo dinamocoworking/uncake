@@ -6,7 +6,10 @@
     "react-scripts": "0.9.4"
   },
   "dependencies": {
+    "dgram": "^1.0.1",
+    "dns": "^0.2.2",
     "firebase": "^3.7.0",
+    "firebase-admin": "^4.1.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
