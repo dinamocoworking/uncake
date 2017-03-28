@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import fire from './fire';
 
-import * as admin from 'firebase-admin';
-var serviceAccount = require("../sak.json");
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://uncake-1a2f6.firebaseio.com"
-});
 
 
 import logo from './logo.svg';
