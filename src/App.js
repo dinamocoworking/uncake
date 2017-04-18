@@ -34,6 +34,18 @@ class App extends Component {
 
 
 
+  sendToken(e){
+    e.preventDefault(); // <- prevent form submit from reloading the page
+    /* Send the message to Firebase */
+    
+    //fire.database().ref('messages').push( this.inputEmail.value );
+    console.log(this.inputEmail.value);
+    
+    generateToken();
+    this.inputEmail.value = ''; // <- clear the input
+  }
+
+
   render() {
     return (
       <div className="App">
