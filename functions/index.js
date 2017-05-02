@@ -1,6 +1,7 @@
 var functions = require('firebase-functions');
 const admin = require('firebase-admin');
 
+var uid = 'manuele.capacci@gmail.com'
 
 var serviceAccount = require("./service-account.json");
 /*
@@ -11,11 +12,15 @@ admin.initializeApp({
 */
 
 exports.generateToken = functions.https.onRequest((request, response) => {
-    response.send("Hello from Firebase! ");
+    
     
     var token = admin.initializeApp(functions.config().firebase);
-    response.send(token);
+    //response.send(token);
     // console.log(request.body);
+
+    // admin.auth().createCustomToken(uid, additionalClaims ? additionalClaims : {})
+    admin.auth().createCustomToken(uid);
+    //response.send("Hello from Firebase! ");
 });
 
 

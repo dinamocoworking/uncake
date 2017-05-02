@@ -41,7 +41,7 @@ class App extends Component {
     //fire.database().ref('messages').push( this.inputEmail.value );
     console.log(this.inputEmail.value);
     
-    generateToken();
+    //generateToken();
     this.inputEmail.value = ''; // <- clear the input
   }
 
@@ -56,7 +56,6 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-
 
         <form onSubmit={this.addMessage.bind(this)}>
           <input type="text" ref={ el => this.inputEl = el }/>
