@@ -1,5 +1,5 @@
 'use strict';
-const functions = require('firebase-functions');
+constvar functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const nodemailer = require('nodemailer');
 

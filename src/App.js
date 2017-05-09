@@ -4,6 +4,8 @@ import fire from './fire';
 import logo from './logo.svg';
 import './App.css';
 
+import SignUpForm from './components/SignUpForm';
+
 class App extends Component {
 
   constructor(props) {
@@ -25,12 +27,7 @@ class App extends Component {
 
 
 
-  addMessage(e){
-    e.preventDefault(); // <- prevent form submit from reloading the page
-    /* Send the message to Firebase */
-    fire.database().ref('messages').push( this.inputEl.value );
-    this.inputEl.value = ''; // <- clear the input
-  }
+  
 
 
 
@@ -57,16 +54,13 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
 
-        <form onSubmit={this.addMessage.bind(this)}>
-          <input type="text" ref={ el => this.inputEl = el }/>
-          <input type="submit"/>
+          <SignUpForm/>
+
           <ul>
             { /* Render the list of messages */
               this.state.messages.map( message => <li key={message.id}>{message.text}</li> )
             }
           </ul>
-        </form>
-
 
       </div>
     );
